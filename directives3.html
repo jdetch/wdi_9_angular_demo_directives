@@ -1,0 +1,18 @@
+<!-- note use of 'x' this time around -->
+<html x-ng-app>
+  <head>
+    <script src='js/angular.js'></script>
+  </head>
+  <!-- initialize app with below data -->
+  <body x-ng-init="data={name: 'James', isVisible: true, loggedIn: false, status: 'red'}">
+
+
+  <div data-ng-switch on="data.loggedIn">
+  <!-- show the user name if they are logged in -->
+    <div data-ng-switch-when="false">
+    Welcome {{data.name}}
+    </div>
+    <!-- show Login if the user is not logged in -->
+    <div data-ng-switch-default data-ng-class="data.status">Login</div>
+  </body>
+</html>
