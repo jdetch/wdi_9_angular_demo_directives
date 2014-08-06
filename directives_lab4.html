@@ -10,8 +10,8 @@
     {title: 'csong 3', artist: 'cartist3', duration: 300, released: true, price: 130},
     {title: 'dsong 4', artist: 'dartist4', duration: 400, released: false, price: 140}]">
       <h3>Song List</h3>
-        Filter: <input type="text"/>
-          <div ng-repeat="song in songs">
+        Filter: <input type="text" ng-model="songFilter.title"/>
+          <div ng-repeat="song in songs | filter: songFilter | orderBy: 'title'">
             <table>
               <tr>Title: {{ song.title }} </tr>
               <tr>artist: {{ song.artist }} </tr>
