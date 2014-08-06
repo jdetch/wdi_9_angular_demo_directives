@@ -14,5 +14,10 @@
     </div>
     <!-- show Login if the user is not logged in -->
     <div data-ng-switch-default data-ng-class="data.status">Login</div>
+    <!-- ng-show; hide or show the element that it is an attribute of -->
+    <div data-ng-show="data.isVisible">
+      Name: <input type='text' data-ng-model="data.name" />
+      {{ data.name }}
+    </div>
   </body>
 </html>
