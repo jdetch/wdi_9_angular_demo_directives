@@ -10,16 +10,14 @@
     {title: 'song 3', artist: 'artist3', duration: 300, released: true, price: 130},
     {title: 'song 4', artist: 'artist4', duration: 400, released: false, price: 140}]">
       <h3>Song List</h3>
-        <ul>
-          <li ng-repeat="song in songs">
+          <div ng-repeat="song in songs">
             <div data-ng-switch on="song.released">
               <div data-ng-switch-when="true">
               Title: {{song.title}}, artist: {{song.artist}}, duration: {{song.duration}}, released: {{song.released}}, price: {{song.price}}
               </div>
             </div>
-          </li>
-        </ul>
-    </div>
+          </div>
+        </div>
 </body>
 </html>
 
