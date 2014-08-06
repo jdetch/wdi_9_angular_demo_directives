@@ -4,20 +4,19 @@
     <script type="text/javascript" src='js/angular.js'></script>
   </head>
   <body>
-    <div ng-init="songs=[{title: 'song 1', artist: 'artist1', duration: 100, released: true, price: 150},
+    <div ng-init="data={songs: [{title: 'song 1', artist: 'artist1', duration: 100, released: true, price: 150},
     {title: 'song 5', artist: 'artist5', duration: 100, released: true, price: 150},
     {title: 'song 2', artist: 'artist2', duration: 200, released: false, price: 120},
     {title: 'song 3', artist: 'artist3', duration: 300, released: true, price: 130},
-    {title: 'song 4', artist: 'artist4', duration: 400, released: false, price: 140}]">
+    {title: 'song 4', artist: 'artist4', duration: 400, released: false, price: 140}],showAll: false}">
       <h3>Song List</h3>
-          <div ng-repeat="song in songs">
-            <div data-ng-switch on="song.released">
-              <div data-ng-switch-when="true">
+
+          <div ng-repeat="song in data.songs" ng-show="song.released || data.showAll">
               Title: {{song.title}}, artist: {{song.artist}}, duration: {{song.duration}}, released: {{song.released}}, price: {{song.price}}
               </div>
             </div>
-          </div>
-        </div>
+
+      Show all songs: <input type="checkbox" data-ng-model="data.showAll"></input>
 </body>
 </html>
 
