@@ -1,0 +1,15 @@
+<!doctype html>
+<!-- ng-app tells Angular that this is an angular app -->
+<html ng-app>
+<head>
+<!-- include angular javascript -->
+<script src='js/angular.js'></script>
+</head>
+<body>
+<h1>First Angular View/App</h1>
+<input type="text" ng-model="name" placeholder="Enter your name"></input>
+
+ <!-- Using an expression {{..}} show the value of the property 'name' -->
+ <p>Name's value is: {{name}}</p>
+</body>
+</html>
