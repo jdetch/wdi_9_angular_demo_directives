@@ -1,0 +1,16 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script type="text/javascript" src='js/angular.js'></script>
+  </head>
+  <body>
+    <div ng-init="songs=[{title: 'song 1', artist: 'artist1', duration: 100, released: true, price: 150},
+    {title: 'song 5', artist: 'artist5', duration: 100, released: true, price: 150},
+    {title: 'song 2', artist: 'artist2', duration: 200, released: false, price: 120},
+    {title: 'song 3', artist: 'artist3', duration: 300, released: true, price: 130},
+    {title: 'song 4', artist: 'artist4', duration: 400, released: false, price: 140}]">
+      <h3>Song List</h3>
+      <ul>
+        <li ng-repeat="song in songs">Title: {{song.title}}, artist: {{song.artist}}, duration: {{song.duration}}, released: {{song.released}}, price: {{song.price}}</li>
+      </ul>
+    </div>
